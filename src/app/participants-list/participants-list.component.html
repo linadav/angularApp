@@ -1,0 +1,39 @@
+<p>participants-list works!</p>
+<div id="participant-table"
+     class="flex container mx-auto items-center justify-center bg shadow-md rounded">
+<!--  <div>Participants: </div>-->
+      <table class="table-auto m-8">
+        <caption>Participants</caption>
+    <thead>
+    <tr>
+      <th class="px-4 py-2">NO.</th>
+      <th class="px-4 py-2">First name</th>
+      <th class="px-4 py-2">Last name</th>
+      <th class="px-4 py-2">Personal ID</th>
+      <th class="px-4 py-2">Email</th>
+      <th class="px-4 py-2">Start</th>
+      <th class="px-4 py-2">End</th>
+      <th class="px-4 py-2" colspan="2">Action</th>
+<!--      <th class="px-4 py-2">Alert</th>-->
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let participant of participants">
+      <td class="border px-4 py-2">{{participant.id_participant}}</td>
+      <td class="border px-4 py-2">{{participant.first_name}}</td>
+      <td class="border px-4 py-2">{{participant.last_name}}</td>
+      <td class="border px-4 py-2">{{participant.personal_code}}</td>
+      <td class="border px-4 py-2">{{participant.email}}</td>
+      <td class="border px-4 py-2">{{participant.dateStart}}</td>
+      <td class="border px-4 py-2">{{participant.dateStop}}</td>
+      <td> <button (click)="share()" >
+        do something
+      </button>
+      </td>
+      <td class="border px-4 py-2"><app-participant-alerts
+      [participant]="participant">
+    </app-participant-alerts></td>
+    </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,3 @@
+<!--<p>participant-alerts works!</p>-->
+<div *ngIf="participant.dateStop < currentDate; else elseBlock">Alert: Not active!</div>
+<ng-template #elseBlock>Active</ng-template>

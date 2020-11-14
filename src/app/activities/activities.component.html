@@ -1,0 +1,26 @@
+<p>activities.component.html works!</p>
+<div id="activities-table"
+     class="flex container mx-auto items-center justify-center bg shadow-md rounded">
+<!--  <div><h1>Activities: </h1></div>-->
+  <table class="table-auto m-8">
+    <caption><h1>Activities </h1></caption>
+    <thead>
+    <tr>
+      <th class="px-4 py-2">No.</th>
+      <th class="px-4 py-2">Activity</th>
+      </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let activity of activities">
+      <td class="border px-4 py-2">{{activity.id_activity}}</td>
+      <td class="border px-4 py-2">{{activity.activity}}</td>
+     </tr>
+    </tbody>
+  </table>
+
+</div>
+<a href="">Home</a>
+
+<a href="default.asp">
+  <img src="smiley.gif" alt="HTML tutorial" style="width:42px;height:42px;">
+</a>
